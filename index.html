@@ -28,7 +28,7 @@
 		}
 
 		.item-left {
-			display: inline;
+			display: flex;
 			float: left;
 			height: 100%;
 		}
@@ -41,13 +41,14 @@
 		}
 
 		h2.title-website {
-			display: inline;
 			font-weight: 400;
 			color: white;
+			margin: 9px 15px 22px;
 		}
 
-		.logo-website {
+		img.logo-website {
 			width: 40px;
+			object-fit: contain;
 		}
 
 		.item-right > a {
@@ -130,6 +131,44 @@
 			padding-top: 15px;
 			color: white;
 		}
+
+		.section-login {
+			width: 30%;
+			margin-right: auto;
+			margin-left: auto;
+		}
+
+		.text-center {
+			text-align: center;
+		}
+
+		.container-login {
+			padding: 10px 30px 20px;
+			background-color: #e9e9e9;
+			border-radius: 6px;
+		}
+
+		input.input {
+			width: 100%;
+			display: block;
+			padding: 5px 10px;
+			box-sizing: border-box;
+			margin-bottom: 20px;
+			border-radius: 5px;
+			border: 3px solid #f25287;
+		}
+
+		button.btn-login {
+			width: 100%;
+		    border-radius: 5px;
+		    background-color: #f25287;
+		    border: none;
+		    color: white;
+		    padding: 8px;
+		   	cursor: pointer;
+		   	font-weight: 600;
+		   	letter-spacing: 1.5px;
+		}
 	</style>
 </head>
 <body>
@@ -142,6 +181,7 @@
 			<a href="#" onclick="event.preventDefault();document.getElementById('budaya').scrollIntoView({behavior: 'smooth'});">Budaya</a>
 			<a href="#" onclick="event.preventDefault();document.getElementById('flora-fauna').scrollIntoView({behavior: 'smooth'});">Flora & Fauna</a>
 			<a href="#" onclick="event.preventDefault();document.getElementById('kuliner').scrollIntoView({behavior: 'smooth'});">Kuliner</a>
+			<a href="#" onclick="event.preventDefault();document.getElementById('login').scrollIntoView({behavior: 'smooth'});">Login</a>
 		</div>
 	</div>
 	<div class="img-primary"></div>
@@ -185,9 +225,45 @@
 				</p>
 			</div>
 		</div>
+		<div class="section-login mt-40" id="login">
+			<div class="container-login">
+				<form action="" method="post">
+					<h4 class="text-center">Silahkan Login</h4>
+					<div class="form-group">
+						<label>Username</label>
+						<input type="text" class="input" name="username" id="username" placeholder="Masukan username anda" required autocomplete>
+					</div>
+					<div class="form-group">
+						<label>Password</label>
+						<input type="password" class="input" name="password" id="password" placeholder="Masukan password anda" required>
+					</div>
+					<button type="submit" class="btn-login" onclick="submitLogin()">
+						Submit
+					</button>
+				</form>
+			</div>
+		</div>
 	</div>
 	<footer class="footer mt-40">
 		2021 &copy; Pesona Tanah Borneo
 	</footer>
+
+	<script type="text/javascript">
+		function submitLogin() {
+			event.preventDefault();
+			var username = document.querySelector('#username');
+			var password = document.querySelector('#password');
+
+			if (username.value === "yuda" && password.value === "1915036114") {
+				alert(`Hai ${username.value}, kamu berhasil login :)`);
+			} else if (username.value === "" || password.value === "") {
+				alert("Anda belum mengisi username atau password");
+			} else {
+				alert("Anda SIAPA ?");
+			}
+			username.value = "";
+			password.value = "";
+		}
+	</script>
 </body>
 </html>
