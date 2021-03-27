@@ -5,180 +5,9 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Tugas - Pemrograman Web</title>
-	<link rel="preconnect" href="https://fonts.gstatic.com">
-	<link rel="preconnect" href="https://fonts.gstatic.com">
 	<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap" rel="stylesheet">
-	<style type="text/css">
-		html, body {
-			width: 100%;
-			height: 100%;
-			margin: 0;
-			padding: 0;
-			font-family: 'Poppins', sans-serif;
-			background-color: #f6f5f5;
-			color: #222831;
-		}
-
-		.navbar {
-			overflow: hidden;
-			padding: 10px 30px;
-			height: 50px;
-			background-color: #f25287;
-			display: flex;
-		}
-
-		.item-left {
-			display: flex;
-			float: left;
-			height: 100%;
-		}
-
-		.item-right {
-			display: inline;
-			margin-left: auto;
-			height: 100%;
-			padding-top: 10px;
-		}
-
-		h2.title-website {
-			font-weight: 400;
-			color: white;
-			margin: 9px 15px 22px;
-		}
-
-		img.logo-website {
-			width: 40px;
-			object-fit: contain;
-		}
-
-		.item-right > a {
-			text-decoration: none;
-			color: white;
-			margin-left: 25px;
-		}
-
-		.item-right > a:hover {
-			color: #ececec;
-			text-decoration: underline;
-		}
-
-		.img-primary {
-			width: 100%;
-			height: 320px;
-			background-image: url('img-primary.jpg');
-			background-position: center;
-			background-size: cover;
-			background-repeat: no-repeat;
-			background-color: red;
-			opacity: .9;
-			box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-		}
-
-		.container {
-			padding: 20px 40px;
-		}
-
-		.title-article {
-			text-align: center;
-			font-weight: 600;
-		}
-
-		.mt-40 {
-			margin-top: 40px;
-		}
-
-		.article > .content-article {
-			display: flex;
-		}
-
-		.content-article > img {
-			width: 300px;
-			border-radius: 20px;
-			box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-		}
-
-		.content-article > p {
-			text-align: justify;
-		}
-
-		p.paragraf-right {
-			margin: 0 0 auto 40px;
-		}
-
-		p.paragraf-left {
-			margin: 0 40px auto 0;
-		}
-
-		.content-article > p > a.btn-read-more {
-			width: 200px;
-			height: 150px;
-			background-color: #f56a79;
-			color: white;
-			text-decoration: none;
-			padding: 8px 15px;
-			border-radius: 5px;
-		}
-
-		.content-article > p > a.btn-read-more:hover {
-			background-color: #f34053;
-		}
-
-		.footer {
-			height: 40px;
-			background-color: #f25287;
-			bottom: 0;
-			text-align: center;
-			padding-top: 15px;
-			color: white;
-		}
-
-		.section-login {
-			width: 30%;
-			margin-right: auto;
-			margin-left: auto;
-		}
-
-		.text-center {
-			text-align: center;
-		}
-
-		.container-login {
-			padding: 10px 30px 20px;
-			background-color: #e9e9e9;
-			border-radius: 6px;
-		}
-
-		input.input {
-			width: 100%;
-			display: block;
-			padding: 5px 10px;
-			box-sizing: border-box;
-			margin-bottom: 20px;
-			border-radius: 5px;
-			border: 3px solid #f25287;
-		}
-
-		button.btn-login {
-			width: 100%;
-			border-radius: 5px;
-			background-color: #f25287;
-			border: none;
-			color: white;
-			padding: 8px;
-			cursor: pointer;
-			font-weight: 600;
-			letter-spacing: 1.5px;
-		}
-
-		.credit {
-			font-weight: 500;
-			color: white;
-		}
-
-		.credit:hover {
-			color: #efff00;
-		}
-	</style>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="my.css">
 </head>
 <body>
 	<div class="navbar">
@@ -190,17 +19,21 @@
 			<a href="#" onclick="event.preventDefault();document.getElementById('budaya').scrollIntoView({behavior: 'smooth'});">Budaya</a>
 			<a href="#" onclick="event.preventDefault();document.getElementById('flora-fauna').scrollIntoView({behavior: 'smooth'});">Flora & Fauna</a>
 			<a href="#" onclick="event.preventDefault();document.getElementById('kuliner').scrollIntoView({behavior: 'smooth'});">Kuliner</a>
-			<a href="#" onclick="event.preventDefault();document.getElementById('login').scrollIntoView({behavior: 'smooth'});">Login</a>
+			<a href="#" class="btn-berlangganan" onclick="event.preventDefault();document.getElementById('login').scrollIntoView({behavior: 'smooth'});">Berlangganan</a>
 		</div>
 	</div>
-	<div class="img-primary"></div>
+	<div class="img-primary">
+		<h3 class="m-0 text-img-primary">The Land Of A Thousand Beauties</h3>
+	</div>
 	<div class="container">
 		<div class="article" id="budaya">
 			<h3 class="title-article">Budaya</h3>
 			<div class="content-article">
-				<img src="budaya.jfif" alt="Image Budaya">
+				<img class="image-content" src="budaya.jfif" alt="Image Budaya">
 				<p class="paragraf-right">
-					Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere rem alias numquam. Ducimus at, officia ipsam vel porro iste excepturi consequatur vero blanditiis possimus voluptatum eligendi aliquid natus dolor eveniet. Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi, explicabo repellat omnis quos accusamus beatae cumque excepturi distinctio ad eius, a mollitia, itaque. Eum placeat et assumenda, veniam, unde ab? Lorem ipsum dolor, sit amet consectetur adipisicing elit. Qui nisi soluta vitae aut sint cumque veritatis repellat repudiandae accusamus. Exercitationem aspernatur voluptatum fugit distinctio dignissimos autem magni aut repellat minus.
+					Dayak secara kaidah bahasa sebenarnya bukan nama untuk sebuah suku. Sebutan “orang Dayak” dalam bahasa Kalimantan pada umumnya berarti “orang pedalaman”, yang mana mereka jauh dari kehidupan kota. Panggilan “orang Dayak” bukanlah dikhususkan pada satu suku saja, tetapi berbagai macam suku. Sebagai contoh, Dayak Kenyah, Dayak Tunjung, Dayak Punan, dan puluhan anak suku lainnya.
+					Adat istiadat yang dimiliki oleh Suku Dayak sangat kentara yakni, terlihat dari bagaimana cara mereka berpakaian, bagaimana cara mereka menjalani kehidupannya, serta upacara/ritual yang mereka lakukan.
+					Selain itu, mereka juga memiliki bahasa khas dan tarian-tarian Dayak. Berbagai macam adat istiadat inilah yang menjadi corak kebudayaan mereka.
 					<br><br>
 					<a href="https://www.detik.com/tag/kebudayaan-suku-dayak" class="btn-read-more" target="_blank">
 						Selengkapnya
@@ -211,22 +44,25 @@
 		<div class="article mt-40" id="flora-fauna">
 			<h3 class="title-article">Flora & Fauna</h3>
 			<div class="content-article">
+				<img class="image-content image-content-left" src="fauna.jfif" alt="Image Fauna">
 				<p class="paragraf-left">
-					Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere rem alias numquam. Ducimus at, officia ipsam vel porro iste excepturi consequatur vero blanditiis possimus voluptatum eligendi aliquid natus dolor eveniet. Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi, explicabo repellat omnis quos accusamus beatae cumque excepturi distinctio ad eius, a mollitia, itaque. Eum placeat et assumenda, veniam, unde ab? Lorem ipsum dolor, sit amet consectetur adipisicing elit. Qui nisi soluta vitae aut sint cumque veritatis repellat repudiandae accusamus. Exercitationem aspernatur voluptatum fugit distinctio dignissimos autem magni aut repellat minus.
+					Kalimantan adalah wilayah geografis (provinsi) di Indonesia yang sangat kaya dengan alam dan hasil buminya. Berbagai macam jenis flora dan fauna ada di wilayah seluas lebih dari 125 ribu kilometer persegi tersebut.
+
+					Namun, sayangnya, keberadaan dari beberapa spesies di Kalimantan sudah dalam keadaan yang memprihatinkan. Saat ini, bahkan populasi mereka sudah terancam hilang dari muka Bumi. 
 					<br><br>
 					<a href="https://ilmugeografi.com/biogeografi/flora-dan-fauna-kalimantan" class="btn-read-more" target="_blank">
 						Selengkapnya
 					</a>
 				</p>
-				<img src="fauna.jfif" alt="Image Fauna">
+				<img class="image-content image-content-right" src="fauna.jfif" alt="Image Fauna">
 			</div>
 		</div>
 		<div class="article mt-40" id="kuliner">
 			<h3 class="title-article">Kuliner</h3>
 			<div class="content-article">
-				<img src="kuliner.jpg" alt="Image Kuliner">
+				<img class="image-content" src="kuliner.jpg" alt="Image Kuliner">
 				<p class="paragraf-right">
-					Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere rem alias numquam. Ducimus at, officia ipsam vel porro iste excepturi consequatur vero blanditiis possimus voluptatum eligendi aliquid natus dolor eveniet. Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi, explicabo repellat omnis quos accusamus beatae cumque excepturi distinctio ad eius, a mollitia, itaque. Eum placeat et assumenda, veniam, unde ab? Lorem ipsum dolor, sit amet consectetur adipisicing elit. Qui nisi soluta vitae aut sint cumque veritatis repellat repudiandae accusamus. Exercitationem aspernatur voluptatum fugit distinctio dignissimos autem magni aut repellat minus.
+					Selain beragam budaya , flora dan fauna, Kalimantan juga memiliki beragam makanan khas yang sangat lezat dan unik. Dengan resep dan bumbu olahan rempah-rempah yang bermacam-macam, membuat kuliner khas Kalimantan memiliki rasa yang begitu spesial bagi penikmatnya. Mulai dari nasi kuning, ketupat kandangan, soto banjar, manday, nasi bekepor dan ratusan makanan lainnya yang sayang untuk dilewatkan jika kalian berkunjung ke Kalimantan.
 					<br><br>
 					<a href="https://www.idntimes.com/food/dining-guide/dian-nita/rekomendasi-makanan-khas-kalimantan-exp-c1c2/1" class="btn-read-more" target="_blank">
 						Selengkapnya
@@ -234,17 +70,18 @@
 				</p>
 			</div>
 		</div>
-		<div class="section-login mt-40" id="login">
+		<div class="section-subscribe mt-50" id="login">
 			<div class="container-login">
-				<form action="" method="post">
-					<h4 class="text-center">Silahkan Login</h4>
+				<form action="#" method="post">
+					<h4 class="text-center mb-0">Ingin Berlangganan Berita ?</h4>
+					<h5 class="text-center mt-0">Masukan email-mu dibawah ini</h5>
 					<div class="form-group">
-						<label>Username</label>
-						<input type="text" class="input" name="username" id="username" placeholder="Masukan username anda" required autocomplete>
+						<label>Nama Lengkap</label>
+						<input type="text" class="input" name="nama" id="nama" placeholder="Masukan nama anda" required autocomplete="off">
 					</div>
 					<div class="form-group">
-						<label>Password</label>
-						<input type="password" class="input" name="password" id="password" placeholder="Masukan password anda" required>
+						<label>Alamat Email</label>
+						<input type="email" class="input" name="email" id="email" placeholder="Masukan alamat email anda" autocomplete="off" required>
 					</div>
 					<button type="submit" class="btn-login" onclick="submitLogin()">
 						Submit
@@ -254,25 +91,34 @@
 		</div>
 	</div>
 	<footer class="footer mt-40">
-		2021 &copy; Pesona Tanah Borneo by <a href="https://www.instagram.com/ini.aduuy/" target="_blank" class="credit">Yuda Pratama</a>
+		100% made with <i class="fa fa-heart"></i> by <a href="https://www.instagram.com/ini.aduuy/" target="_blank" class="credit">Yuda Pratama</a>
 	</footer>
 
 	<script type="text/javascript">
 		function submitLogin() {
 			event.preventDefault();
-			var username = document.querySelector('#username');
-			var password = document.querySelector('#password');
+			var nama = document.querySelector('#nama');
+			var email = document.querySelector('#email');
 
-			if (username.value === "yuda" && password.value === "1915036114") {
-				alert(`Hai ${username.value}, kamu berhasil login :)`);
-			} else if (username.value === "" || password.value === "") {
-				alert("Anda belum mengisi username atau password");
+			if (nama.value != "" && email.value != "") {
+				alert(`Hai ${nama.value}, kamu berhasil berlangganan berita dari Pesona Tanah Borneo :)`);
 			} else {
-				alert("Anda SIAPA ?");
+				alert('Harap mengisi form dengan benar !');
 			}
-			username.value = "";
-			password.value = "";
+
+			nama.value = "";
+			email.value = "";
 		}
+
+		let indexImage = 2;
+		setInterval(function() {
+			document.querySelector('.img-primary').style.background = `linear-gradient(rgb(99 99 99 / 70%), rgb(0 0 0 / 70%)), url('img-primary${indexImage}.jpg')`;
+			document.querySelector('.img-primary').style.backgroundPosition = (indexImage == 3) ? `top` : `center`;
+			document.querySelector('.img-primary').style.backgroundSize = `cover`;
+			document.querySelector('.img-primary').style.backgroundRepeat = `no-repeat`;
+
+			indexImage = (indexImage != 3) ? (indexImage + 1) : 1;
+		}, 3200);
 	</script>
 </body>
 </html>
